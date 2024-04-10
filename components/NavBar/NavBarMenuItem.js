@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import Link from 'next/link'
 
-const StyledLink = styled.a`
+const StyledLink = styled(Link)`
 	text-decoration: none;
 	float: right;
 	padding: 1rem;

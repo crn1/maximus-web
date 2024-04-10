@@ -7,6 +7,7 @@ import NavBarProfile from './NavBarProfile'
 
 const StyledNavbar = styled.div`
 	text-align: center;
+	display: flow-root;
 `
 
 function NavBar() {
