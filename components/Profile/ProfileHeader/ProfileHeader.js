@@ -4,10 +4,10 @@ import styled from 'styled-components'
 import SimpleSection from '../../SimpleSection/SimpleSection'
 
 import ProfileImage from '../ProfileImage'
-
 import ProfileHeaderName from './ProfileHeaderName'
 import ProfileHeaderHeadline from './ProfileHeaderHeadline'
 import ProfileHeaderLocation from './ProfileHeaderLocation'
+import ProfileHeaderIndustry from './ProfileHeaderIndustry'
 
 const Wrapper = styled.div`
 	float: left;
@@ -23,7 +23,7 @@ function ProfileHeader(props) {
   return (
 		<SimpleSection>
 			<Container>
-				<ProfileImage imgSrc={props.imageSrc} />
+				<ProfileImage size={props.size} imgSrc={props.imageSrc} />
 				<Wrapper>
 					<ProfileHeaderName>{props.name}</ProfileHeaderName>
 					<ProfileHeaderHeadline>{props.headline}</ProfileHeaderHeadline>
@@ -32,6 +32,10 @@ function ProfileHeader(props) {
 						address={props.address}
 						relocation={props.relocation}
 					/>
+					{ props.industryTag ? <ProfileHeaderIndustry
+						industryTag={props.industryTag}
+						industryName={props.industryName}
+					/> : null}
 				</Wrapper>
 			</Container>
 		</SimpleSection>

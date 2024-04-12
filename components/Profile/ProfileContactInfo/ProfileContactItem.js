@@ -1,9 +1,9 @@
 'use client';
 import styled from 'styled-components'
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 import SimpleSection from '../../SimpleSection/SimpleSection'
 import CandiateContactItem from './ProfileContactItem'
-import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const Wrapper = styled.div`
 	display: flex;
@@ -18,10 +18,10 @@ const ProfileContactItemIcon = styled.i`
 	font-size: 1rem;
 `
 
-function ProfileContactItem({ contact }) {
+function ProfileContactItem({ contact, iconClass }) {
   return (
 		<Wrapper>
-			<ProfileContactItemIcon className='bi bi-linkedin' />
+			<ProfileContactItemIcon className={iconClass} />
 			{ contact }
 		</Wrapper>
 	);

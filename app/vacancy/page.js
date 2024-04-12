@@ -12,18 +12,15 @@ export default function Page() {
   return (
 		<>
 			<SimpleSection>
-				<ProfileId entityName='Candidate' entityId='d4f5gi3' />
+				<ProfileId entityName='Vacancy' entityId='d4f5gi3' />
 			</SimpleSection>
 			<ProfileHeader
-				name='William Johnson'
-				headline='Software Developer and Product Manager'
-				location='New York, United States'
-				address='21st Jump Street, 22000 New York'
-				relocation='San Francisco (USA), Munich (Germany)'
+				name='PHP Developer'
+				size='mid'
+				headline={<Link href='./company'>Starmode.io Recruiting</Link>}
 			/>
-			<ProfileContactInfo />
 			<ProfileFields />
-			<AssociatedSection sectionName='Former Colleagues' />
+			<AssociatedSection sectionName='Candidates' />
 			<br />
 		</>
 	);

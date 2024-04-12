@@ -1,16 +1,14 @@
 'use client';
+import Link from 'next/link'
 import styled from 'styled-components'
 
 import ProfileImage from '../Profile/ProfileImage'
 
 const Container = styled.div`
 	flex-direction: row;
-	width: 100%;
 	display: flex;
 	align-items: center;
-	padding: 0.5rem;
-	border: 1px solid gray;
-	border-radius: 5px;
+	width: calc(100%/4 - 4*0.5rem);
 `
 
 const InfoContainer = styled.div`
@@ -28,12 +26,20 @@ const ProfileHeadline = styled.span`
 	font-size: small;
 `
 
-function AssociatedProfile({profileName, profileHeadline}) {
+const Icon = styled.i`
+	color: black;
+	font-size: 2rem;
+`
+
+function AssociatedProfile({profileName, profileHeadline, iconClass, href}) {
   return (
 		<Container>
-			<ProfileImage circled size='small' />
+			{ iconClass ?
+				<Icon className={iconClass} /> :
+				<ProfileImage circled size='small' />
+			}
 			<InfoContainer>
-				<ProfileName>{profileName}</ProfileName>
+				<ProfileName><Link href={href}>{profileName}</Link></ProfileName>
 				<ProfileHeadline>{profileHeadline}</ProfileHeadline>
 			</InfoContainer>
 		</Container>

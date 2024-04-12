@@ -13,13 +13,11 @@ function ProfileContactInfo() {
   return (
 		<SimpleSection>
 			<Container>
-				<ProfileContactItem contact='gluvajic.work@gmail.com' />
-				<ProfileContactItem contact='+38162291745' />
-				<ProfileContactItem contact='linkedin.com/in/george-gluvajic/' />
-				<ProfileContactItem contact='github.com/crn1' />
-				<ProfileContactItem />
-				<ProfileContactItem />
-				<ProfileContactItem />
+				<ProfileContactItem iconClass='bi bi-envelope' contact='gluvajic.work@gmail.com' />
+				<ProfileContactItem iconClass='bi bi-phone' contact='+38162291745' />
+				<ProfileContactItem iconClass='bi bi-linkedin' contact='linkedin.com/in/george-gluvajic/' />
+				<ProfileContactItem iconClass='bi bi-github' contact='github.com/crn1' />
+				<ProfileContactItem iconClass='bi bi-globe' contact='starmode.io' />
 			</Container>
 		</SimpleSection>
 	);

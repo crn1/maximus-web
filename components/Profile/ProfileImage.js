@@ -2,7 +2,8 @@ import styled from 'styled-components'
 
 const StyledImg = styled.img`
 	${({ size }) => size == 'big' ?
-		'height: 9rem; width: 9rem;' : size == 'small' ?
+		'height: 9rem; width: 9rem;' : size == 'mid' ?
+		'height: 5rem; width: 5rem;' : size == 'small' ?
 		'height: 2rem; width: 2rem;' : size == 'tiny' ?
 		'height: 1.5rem; width: 1.5rem;' :
 		'height: 2rem; width: 2rem;'
@@ -16,6 +17,11 @@ const StyledImg = styled.img`
 	object-fit: cover;
 	object-position: center center;
 	float: left;
+`
+
+const StyledIcon = styled.i`
+	color: black;
+	font-size: 1rem;
 `
 
 function ProfileImage({ imgSrc, bordered=true, circled=false, size='big' }) {

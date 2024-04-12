@@ -28,8 +28,9 @@ function NavBar() {
 				/>
 			</ProfileImageContainer>
 
-			<NavBarMenuItem name='Candidates' link='/candidates' />
-			<NavBarMenuItem name='Vacancies' link='/vacancies' />
+			<NavBarMenuItem name='Candidates' link='/candidate' />
+			<NavBarMenuItem name='Companies' link='/company' />
+			<NavBarMenuItem name='Vacancies' link='/vacancy' />
 		</StyledNavbar>
   );
 }

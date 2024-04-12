@@ -19,9 +19,13 @@ export default function Page() {
 				headline='Finding very niche talent in the German market'
 				location='Novi Sad, Serbia'
 				address='Trivijalnih Basketaša 89, 21000 Novi Sad'
+				industryTag='trucking'
+				industryName='Trucking & Logistics'
 			/>
 			<ProfileContactInfo />
-			<AssociatedSection sectionName='People' />
+			<AssociatedSection sectionName='Vacancies' />
+			<br />
+			<AssociatedSection sectionName='Contacts' />
 		</>
 	);
 }
