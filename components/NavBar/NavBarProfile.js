@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import NavBarProfileImage from './NavBarProfileImage.js'
+import ProfileImage from '../Profile/ProfileImage'
 
 const Wrapper = styled.div`
 	float: left;
@@ -8,7 +8,7 @@ const Wrapper = styled.div`
 function NavBarProfile({ imgsrc }) {
   return (
 		<Wrapper>
-			<NavBarProfileImage imgsrc={imgsrc} />
+			<ProfileImage imgsrc={imgsrc} />
 		</Wrapper>
   );
 }

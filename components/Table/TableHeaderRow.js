@@ -1,18 +1,9 @@
 'use client';
 import styled from 'styled-components'
 
-const StyledTableHeaderRow = styled(TableHeaderRow)`
-	background-color: green;
-	color: white;
+const TableHeaderRow = styled.tr`
 	font-weight: bold;
+	background-color: gray;
 `
 
-function TableHeaderRow({children}) {
-	return (
-		<tr>
-			{children}
-		</tr>
-	)
-}
-
-export default StyledTableHeaderRow;
+export default TableHeaderRow;

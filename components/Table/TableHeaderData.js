@@ -1,16 +1,10 @@
 'use client';
 import styled from 'styled-components'
 
-const StyledTableHeaderData = styled(TableHeaderData)`
+const TableHeaderData = styled.td`
 	font-weight: bold;
+	padding: 0.2rem;
+	position: sticky;
 `
 
-function TableHeaderData({children}) {
-	return (
-		<th>
-			{children}
-		</th>
-	)
-}
-
-export default StyledTableHeaderData;
+export default TableHeaderData;

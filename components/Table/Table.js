@@ -2,43 +2,33 @@
 import styled from 'styled-components'
 
 import TableHeaderRow from './TableHeaderRow'
-import TableHeaderData from './TableHeaderRow'
+import TableHeaderData from './TableHeaderData'
 import TableRow from './TableRow'
-import TableData from './TableRow'
+import TableData from './TableData'
 
-const StyledTable = styled(Table)`
-	border: 1px solid black;
+const StyledTable = styled.table`
+	border-top: 1px solid grey;
+	border-bottom: 1px solid grey;
+	width: 100%;
 `
 
-function Table() {
+function Table(props) {
+	const headerItems = props.headerItems.map(item =>
+		<TableHeaderData>{item}</TableHeaderData>
+	);
+
   return (
-		<table>
-			<TableHeaderRow>
-				<TableHeaderData>
-					john
-				</TableHeaderData>
-				<TableHeaderData>
-					doe
-				</TableHeaderData>
-			</TableHeaderRow>
-			<TableRow>
-				<TableData>
-					john
-				</TableData>
-				<TableData>
-					doe
-				</TableData>
-			</TableRow>
-			<TableRow>
-				<TableData>
-					john
-				</TableData>
-				<TableData>
-					mnoe
-				</TableData>
-			</TableRow>
-		</table>
+		<StyledTable>
+			<thead>
+				<TableHeaderRow>
+					{ headerItems }
+				</TableHeaderRow>
+			</thead>
+			<tbody>
+				{ props.children }
+			</tbody>
+		</StyledTable>
   );
 }
 
-export default StyledTable;
+export default Table;

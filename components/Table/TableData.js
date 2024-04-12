@@ -1,16 +1,8 @@
 'use client';
 import styled from 'styled-components'
 
-const StyledTableData = styled(TableData)`
-	color: pink;
+const TableData = styled.td`
+	padding: 0.2rem;
 `
 
-function TableData({children}) {
-	return (
-		<td>
-			{children}
-		</td>
-	)
-}
-
-export default StyledTableData;
+export default TableData;
